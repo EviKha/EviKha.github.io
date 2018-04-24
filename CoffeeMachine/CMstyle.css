@@ -4,3 +4,67 @@ h1 {
   border: 3px solid blue;
   text-shadow: 2px 2px 3px purple;
 }
+#machinebg{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+
+}
+#root {
+	position: absolute;
+	z-index: 1;
+}
+
+#coffeeList{
+	position: absolute;
+	top: 164px;
+    left: 201px;
+    width: 156px;
+}
+#coffeeList > p> button {
+	padding: 10px;
+	width: 100%;
+}
+#selectedcoffee{
+	position: absolute;
+	left: 106px;
+    width: 347px;
+	background-color: white;
+	height: 75px;
+	font-size: 40px;	
+}
+#selectedcoffee >p {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+#end {
+	position: absolute;
+	left: 245px;
+	font-size: 30px;
+	text-align: center;
+	top: 125px;
+
+}
+#karmanbg{
+	position: absolute;
+	left: 506px;
+    width: 245px;
+    top: 100px;
+
+
+}
+#karmanId{
+	position: absolute;
+	left: 540px;
+    top: 155px;
+    z-index: 1;
+
+}
+#karmanId > #but{
+	margin-left: 35%;
+}
+#karmanId > p {
+	margin: 0;
+}
