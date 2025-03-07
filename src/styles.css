@@ -1,0 +1,258 @@
+/* Дополнительные стили для CPA страницы */
+
+:root {
+  --primary-color: #4989fd;
+  --secondary-color: #0c117b;
+  --accent-color: #15c68f;
+  --text-light: #adadc1;
+  --text-dark: #626262;
+  --bg-dark: #1a1a2e;
+}
+
+/* Общие стили */
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+/* Кнопки */
+.cta-button {
+  background-color: var(--primary-color);
+  color: white !important;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Блоки офферов */
+.offer-box {
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.offer-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.offer-box h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/* Счетчики статистики */
+.stats-counter {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+/* Отзывы */
+.testimonial {
+  background-color: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  position: relative;
+}
+
+.testimonial:before {
+  content: '"';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 60px;
+  color: rgba(73, 137, 253, 0.1);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+/* Форма регистрации */
+#contactform input,
+#contactform select {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 5px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background-color: rgba(255,255,255,0.05);
+  color: white;
+  margin-bottom: 15px;
+}
+
+#contactform input::placeholder,
+#contactform select::placeholder {
+  color: var(--text-light);
+}
+
+#contactform select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23adadc1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 15px;
+}
+
+#contactform select option {
+  background-color: var(--bg-dark);
+  color: white;
+}
+
+#contactform button {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+}
+
+/* Преимущества */
+.list_check li {
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.list_check li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .stats-counter {
+    font-size: 36px;
+  }
+  
+  .offer-box {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 28px;
+  }
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.offer-box, .testimonial {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.offer-box:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.offer-box:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Дополнительные улучшения */
+.highlight {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.text-center .section-title:after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Счетчик партнеров */
+.partner-counter {
+  background-color: rgba(73, 137, 253, 0.1);
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.partner-counter h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.counter-number {
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin: 20px 0;
+}
+
+.partner-counter p {
+  margin-bottom: 0;
+}
+
+/* Стили из launch.html */
+.container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 40px;
+  max-width: 600px;
+}
+
+.button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.logo {
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
