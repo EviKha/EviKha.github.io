@@ -1,350 +1,225 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9"> <![endif]-->
-<!--[if IE 9]><html class="no-js lt-ie10"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
-
+<html lang="ru">
 <head>
-	<!-- Basic Page Needs -->
-	<meta charset="utf-8">
-	<title>PrettyLeads - CPA Партнерская сеть</title>
-	<meta name="description" content="PrettyLeads - ведущая CPA партнерская сеть. Монетизируйте свой трафик с нами и получайте максимальную прибыль.">
-	<meta name="author" content="PrettyLeads">
-	<!-- Mobile Specific Metas -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<!-- Favicons -->
-	<link rel="shortcut icon" href="images/Logo.png">
-	<!-- FONTS -->
-	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito+Sans:100,200,300,400,400italic,500,600,700,700italic,900'>
-	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,400italic,500,600,700,700italic,900'>
-	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,400italic,500,600,700,700italic,900'>
-	<!-- Bootstrap core CSS -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-	<!--CSS -->
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPA Network - Ваш путь к успеху</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">CPA Network</div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="active">Главная</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#partnership">Партнерская программа</a></li>
+                <li><a href="#blog">Блог</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<body class="home page template-slider style-simple button-round layout-full-width if-overlay if-border-hide no-content-padding header-transparent header-fw sticky-header sticky-tb-color ab-hide subheader-both-left menu-link-color menuo-right menuo-no-borders mobile-tb-center mobile-side-slide mobile-mini-mr-lc tablet-sticky mobile-header-mini mobile-sticky">
-	<div id="Wrapper">
-		<div id="Header_wrapper">
-			<header id="Header">
-				<div id="Top_bar" style="background-color: rgba(12, 17, 123, 0.9); padding: 15px 0; position: fixed; width: 100%; z-index: 100; top: 0; left: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
-					<div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-						<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: nowrap;">
-							<!-- Логотип -->
-							<div style="flex: 0 0 auto; margin-right: 30px;">
-								<a href="index.html" title="PrettyLeads - CPA сеть" style="display: flex; align-items: center; text-decoration: none;">
-									<img src="images/Logo.png" alt="Logo" style="height: 40px; margin-right: 10px;">
-									<span style="color: white; font-weight: bold; font-size: 20px; white-space: nowrap;">PrettyLeads</span>
-								</a>
-							</div>
-							
-							<!-- Навигация -->
-							<div style="flex: 1 1 auto;">
-								<nav>
-									<ul style="list-style: none; display: flex; margin: 0; padding: 0; justify-content: flex-end; flex-wrap: wrap;">
-										<li style="margin: 5px 15px;"><a href="#offers" style="color: white; text-decoration: none; font-weight: bold; padding: 8px 0; display: block; position: relative; white-space: nowrap;">Офферы</a></li>
-										<li style="margin: 5px 15px;"><a href="#benefits" style="color: white; text-decoration: none; font-weight: bold; padding: 8px 0; display: block; position: relative; white-space: nowrap;">Преимущества</a></li>
-										<li style="margin: 5px 15px;"><a href="#stats" style="color: white; text-decoration: none; font-weight: bold; padding: 8px 0; display: block; position: relative; white-space: nowrap;">Статистика</a></li>
-										<li style="margin: 5px 15px;"><a href="#register" style="color: white; text-decoration: none; font-weight: bold; padding: 8px 15px; display: block; position: relative; background-color: #4989fd; border-radius: 20px; white-space: nowrap; transition: background-color 0.3s;">Регистрация</a></li>
-									</ul>
-								</nav>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="header" style="position: relative; height: 700px; overflow: hidden;">
-					<img src="images/slider-bg.jpg" alt="Background" style="width: 100%; height: 100%; object-fit: cover;">
-					<div class="header-content" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; box-sizing: border-box;">
-						<h1 style="color: #4989fd; font-size: 45px; font-weight: bold; margin-bottom: 10px; line-height: 1.2;">Зарабатывайте на CPA-маркетинге</h1>
-						<h2 style="color: #0c117b; font-size: 40px; font-weight: bold; margin-bottom: 30px; line-height: 1.2;">с лучшими офферами на рынке</h2>
-						<p style="color: #adadc1; font-size: 18px; max-width: 600px; margin-bottom: 30px; line-height: 1.5;">
-							Присоединяйтесь к нашей партнерской программе и получайте высокие комиссионные.<br>
-							Мы предлагаем лучшие инструменты для максимизации вашего дохода.
-						</p>
-						<a href="#register" class="cta-button" style="margin-top: 20px;">Начать зарабатывать</a>
-						
-						<div style="position: absolute; bottom: 30px; left: 30px; display: flex; align-items: center; text-align: left;">
-							<img src="images/Logo.png" width="34" height="45" style="margin-right: 10px;">
-							<div>
-								<p style="margin: 0; color: #adadc1; font-weight: bold; margin-bottom: 5px;">Нужна помощь?</p>
-								<p style="margin: 0; color: #4989fd; font-weight: bold;">prettyleads@yandex.ru</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</header>
-		</div>
-		<div id="Content">
-			<!-- Преимущества для вебмастеров -->
-			<div class="section" id="benefits" style="padding-top:70px;padding-bottom:70px;background-repeat:no-repeat;background-position:left top">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="image_frame image_item no_link scale-with-grid aligncenter no_border">
-								<div class="image_wrapper"><img class="scale-with-grid" src="images/agency4-home-whyus-people.jpg" alt="agency4-home-whyus-people" width="494" height="874"> </div>
-							</div>
-						</div>
-						<div class="col-md-6" style="padding:15px 15px 0px">
-							<div class="column_attr clearfix align_left" style="padding:35px 0 0 0;">
-								<h2><span style="color: #4989fd;">Преимущества</span> для вебмастеров</h2>
-								<hr class="no_line" style="margin: 0 auto 20px auto">
-								<p style="color: #626262;"> Более 2000 вебмастеров уже зарабатывают с нами. Присоединяйтесь и вы! </p>
-								<hr class="no_line" style="margin: 0 auto 20px auto">
-								<ul class="list_check">
-									<li> Высокие выплаты за каждого привлеченного клиента </li>
-									<li> Еженедельные выплаты без задержек через любые платежные системы </li>
-									<li> Персональный менеджер и поддержка 24/7 </li>
-									<li> Уникальные промо-материалы и инструменты для повышения конверсии </li>
-									<li> Детальная статистика и аналитика для оптимизации кампаний </li>
-									<li> Эксклюзивные офферы с повышенными ставками </li>
-								</ul>
-								<hr class="no_line" style="margin: 0 auto 40px auto">
-								<a href="#register" class="cta-button">Стать партнером</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<!-- Топовые офферы -->
-			<div class="section mcb-section bg-cover" id="offers" style="padding-top:50px;padding-bottom:50px;background-image:url(images/slider-bg.jpg);background-repeat:no-repeat;background-position:center top;background-attachment:fixed">
-				<div class="container">
-					<div class="row" style="padding:0px 0px 0px 0px">
-						<div class="col-12 text-center">
-							<hr class="no_line" style="margin: 0 auto 50px auto">
-							<h2><span style="color: #4989fd;">Топовые офферы</span>
-							<br>
-							<span style="color: #fff;">с высокими выплатами</span></h2>
-							<hr class="no_line" style="margin: 0 auto 20px auto">
-							<p> <span style="color:#fff;">Выбирайте из сотен проверенных офферов с высокой конверсией</span> </p>
-						</div>
-						<div class="col-12">
-							<hr class="no_line" style="margin:0 auto 30px">
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-4">
-							<div class="offer-box text-center">
-								<div class="image_wrapper"><img class="scale-with-grid" src="images/Logo.png" alt="Финансы" width="80" height="80"></div>
-								<hr class="no_line" style="margin:0 auto 20px">
-								<h4 style="color:#fff">Финансовые офферы</h4>
-								<p><span style="color: #4e579b;">Кредиты, займы, дебетовые карты, страхование. Выплаты до 5000 рублей за одобренную заявку.</span></p>
-								<hr class="no_line" style="margin:0 auto 20px">
-								<a href="#register" class="cta-button" style="padding:10px 20px; font-size:14px;">Получить доступ</a>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="offer-box text-center">
-								<div class="image_wrapper"><img class="scale-with-grid" src="images/Logo.png" alt="Товары" width="80" height="80"></div>
-								<hr class="no_line" style="margin:0 auto 20px">
-								<h4 style="color:#fff">Товарные офферы</h4>
-								<p><span style="color: #4e579b;">Товары для здоровья, красоты, дома. Выплаты до 30% от стоимости заказа. Высокий средний чек.</span></p>
-								<hr class="no_line" style="margin:0 auto 20px">
-								<a href="#register" class="cta-button" style="padding:10px 20px; font-size:14px;">Получить доступ</a>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="offer-box text-center">
-								<div class="image_wrapper"><img class="scale-with-grid" src="images/Logo.png" alt="Игры" width="80" height="80"></div>
-								<hr class="no_line" style="margin:0 auto 20px">
-								<h4 style="color:#fff">Игровые офферы</h4>
-								<p><span style="color: #4e579b;">Мобильные и онлайн игры. Выплаты за регистрацию и достижение уровней. Высокая конверсия.</span></p>
-								<hr class="no_line" style="margin:0 auto 20px">
-								<a href="#register" class="cta-button" style="padding:10px 20px; font-size:14px;">Получить доступ</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<!-- Статистика -->
-			<div class="section" id="stats" style="padding-top:130px;background-repeat:no-repeat;background-position:left top">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="image_frame image_item no_link scale-with-grid aligncenter no_border">
-								<div class="image_wrapper"><img class="scale-with-grid" src="images/agency4-home-numbers-image.jpg" alt="agency4-home-numbers-image" width="510" height="696"> </div>
-							</div>
-						</div>
-						<div class="col-md-6" style="padding:30px 2%">
-							<div class="row">
-								<div class="col-12">
-									<h2>Наши <span style="color: #4989fd;">показатели</span></h2>
-									<hr class="no_line" style="margin: 0 auto 20px auto">
-									<p>Мы гордимся результатами наших партнеров и постоянно работаем над улучшением сервиса</p>
-								</div>
-								<div class="col-md-4">
-									<div class="column_attr clearfix align_left mobile_align_center" style="padding:10px;"> 
-										<hr class="no_line" style="margin: 0 auto 10px auto">
-										<div class="google_font stats-counter"> >25% </div>
-										<p> Средний показатель
-											<br> CTR </p>
-									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="column_attr clearfix align_left mobile_align_center" style="padding:10px;"> 
-										<hr class="no_line" style="margin: 0 auto 10px auto">
-										<div class="google_font stats-counter"> +40% </div>
-										<p> <span style="color: #0c117b;">К прибыли
-											<br>
-											с нашими инструментами</span> </p>
-									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="column_attr clearfix align_left mobile_align_center" style="padding:10px;"> 
-										<hr class="no_line" style="margin: 0 auto 10px auto">
-										<div class="google_font stats-counter"> 2000+ </div>
-										<p> <span style="color: #0c117b;">Активных
-											<br>
-											вебмастеров</span> </p>
-									</div>
-								</div>
-							</div>
-							
-							<!-- Отзывы -->
-							<div class="row" style="margin-top:40px;">
-								<div class="col-12">
-									<h3>Отзывы наших партнеров</h3>
-								</div>
-								<div class="col-12">
-									<div class="testimonial">
-										<p>"Работаю с PrettyLeads уже больше года. Стабильные выплаты, отличная поддержка и высокие ставки. Рекомендую!"</p>
-										<p style="color:#4989fd; font-weight:700;">Алексей, арбитражник</p>
-									</div>
-									<div class="testimonial">
-										<p>"Перешел от конкурентов и не жалею. Конверсия выросла на 35%, а доход почти в 2 раза. Спасибо за крутые промо-материалы!"</p>
-										<p style="color:#4989fd; font-weight:700;">Михаил, владелец сайта</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<!-- Регистрация -->
-			<div class="section mcb-section bg-cover" id="register" style="padding-top:70px;background-image:url(images/slider-bg.jpg);background-repeat:no-repeat;background-position:center">
-				<div class="container">
-					<div class="row">
-						<div class="col-12">
-							<div class="column_attr clearfix align_center">
-								<h2><span style="color: #4989fd;">НАЧНИТЕ ЗАРАБАТЫВАТЬ ПРЯМО СЕЙЧАС</span></h2>
-							</div>
-						</div>
-						<div class="col-12">
-							<hr class="no_line" style="margin:0 auto 40px"> </div>
-						<div class="col-12">
-							<div class="column_attr clearfix align_center">
-								<p style="color:#ADADC1;"> РЕГИСТРИРУЙТЕСЬ В НАШЕЙ CPA ПАРТНЕРСКОЙ СЕТИ И ПОЛУЧИТЕ БОНУС 1000 РУБЛЕЙ НА СТАРТЕ! </p>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="placeholder"> &nbsp; </div>
-						</div>
-						<div class="col-md-6">
-							<div class="column_attr clearfix align_center mobile_align_center" style="padding:0 10%;">
-								<div id="contactWrapper">
-									<div id="contactform">
-										<form method="post" id="reused_form">
-											<div class="row">
-												<div class="col-md-12" style="margin-bottom:15px;">
-													<input placeholder="Ваше имя" id="name" type="text" name="Name" required maxlength="50">
-												</div>
-												<div class="col-md-12" style="margin-bottom:15px;">
-													<input placeholder="Ваш e-mail" id="email" type="email" name="Email" required maxlength="50">
-												</div>
-												<div class="col-md-12" style="margin-bottom:15px;">
-													<input placeholder="Ваш телефон" id="phone" type="tel" name="Phone" required maxlength="50">
-												</div>
-												<div class="col-md-12" style="margin-bottom:15px;">
-													<select id="traffic_source" name="TrafficSource" required>
-														<option value="" disabled selected>Источник трафика</option>
-														<option value="website">Сайт/Блог</option>
-														<option value="social">Социальные сети</option>
-														<option value="context">Контекстная реклама</option>
-														<option value="teaser">Тизерные сети</option>
-														<option value="email">Email-маркетинг</option>
-														<option value="other">Другое</option>
-													</select>
-												</div>
-												<div class="col-md-12">
-													<button class="button-primary" id="submit" type="submit">Зарегистрироваться и получить бонус</button>
-												</div>
-											</div>
-										</form>
-										<div id="success_message" style="display:none">
-											<h3>Регистрация успешно отправлена!</h3>
-											<p>Мы свяжемся с вами в ближайшее время.</p>
-										</div>
-										<div id="error_message" style="width:100%; height:100%; display:none;">
-											<h3>Ошибка</h3> К сожалению, произошла ошибка при отправке формы. Пожалуйста, попробуйте еще раз.</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-12"> </div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<footer id="Footer" class="clearfix">
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<hr class="no_line" style="margin:0 auto 100px"> </div>
-					<div class="col-md-6">
-						<div class="image_frame image_item no_link scale-with-grid alignnone no_border">
-							<div class="image_wrapper"><img class="scale-with-grid" src="images/Logo.png" alt="Logo" width="207" height="50"> </div>
-						</div>
-						<hr class="no_line" style="margin: 0 auto 30px auto"> 8-915-138-10-14
-						<br> prettyleads@yandex.ru</div>
-					<div class="col-md-3">
-						<h6>Адрес</h6><a href="#" style="color:inherit">Москва</a>
-						<br> <a href="#" style="color:inherit">Щелковское шоссе</a>
-						<br> <a href="#" style="color:inherit">дом 100, корп.108, оф. 251</a>
-					</div>
-					<div class="col-md-3">
-						<h6>Полезные ссылки</h6>
-						<a href="#" style="color:inherit">Правила работы</a><br>
-						<a href="#" style="color:inherit">Политика конфиденциальности</a><br>
-						<a href="#" style="color:inherit">Часто задаваемые вопросы</a>
-					</div>
-					<div class="col-12">
-						<hr class="no_line" style="margin:0 auto 70px"> </div>
-					<div class="col-12 text-center">
-						<p>© 2025 PrettyLeads - Все права защищены</p>
-					</div>
-				</div>
-			</div>
-		</footer>
-	</div>
-	<div id="Side_slide" class="right dark" data-width="250">
-		<div class="close-wrapper"> <a href="#" class="close"><i class="icon-cancel-fine"></i></a> </div>
-		<div class="menu_wrapper"></div>
-	</div>
-	<div id="body_overlay"></div>
-	<!-- JS -->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="https://code.jquery.com/jquery-migrate-3.4.0.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-	<script>
-	// Простой слайдер и обработка формы
-	document.addEventListener('DOMContentLoaded', function() {
-		// Форма регистрации
-		document.getElementById('reused_form').addEventListener('submit', function(e) {
-			e.preventDefault();
-			document.getElementById('success_message').style.display = 'block';
-			document.getElementById('reused_form').style.display = 'none';
-		});
-	});
-	</script>
-	
-	<!-- Скрипт для генерации изображений -->
-	<script src="images.js"></script>
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>Зарабатывайте с нами</h1>
+                <p>Ведущая CPA сеть с высокими выплатами и эксклюзивными офферами</p>
+                <div class="cta-buttons">
+                    <a href="#partnership" class="btn primary">Стать партнером</a>
+                    <a href="#about" class="btn secondary">Узнать больше</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>О нас</h2>
+                <div class="about-grid">
+                    <div class="about-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Высокие выплаты</h3>
+                        <p>Конкурентные ставки и своевременные выплаты</p>
+                    </div>
+                    <div class="about-item">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Надежное партнерство</h3>
+                        <p>Более 1000+ довольных партнеров</p>
+                    </div>
+                    <div class="about-item">
+                        <i class="fas fa-tools"></i>
+                        <h3>Современные инструменты</h3>
+                        <p>Продвинутая аналитика и трекинг</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="partnership" class="partnership">
+            <div class="container">
+                <h2>Партнерская программа</h2>
+                <div class="offers-grid">
+                    <div class="offer-card">
+                        <h3>Начинающий</h3>
+                        <div class="price">до $1000</div>
+                        <ul>
+                            <li>Базовые офферы</li>
+                            <li>Еженедельные выплаты</li>
+                            <li>Базовая поддержка</li>
+                        </ul>
+                        <a href="#" class="btn primary">Начать</a>
+                    </div>
+                    <div class="offer-card premium">
+                        <h3>Продвинутый</h3>
+                        <div class="price">до $5000</div>
+                        <ul>
+                            <li>Премиум офферы</li>
+                            <li>Выплаты по запросу</li>
+                            <li>Персональный менеджер</li>
+                        </ul>
+                        <a href="#" class="btn primary">Начать</a>
+                    </div>
+                    <div class="offer-card">
+                        <h3>PRO</h3>
+                        <div class="price">$5000+</div>
+                        <ul>
+                            <li>Эксклюзивные офферы</li>
+                            <li>Индивидуальные условия</li>
+                            <li>VIP поддержка 24/7</li>
+                        </ul>
+                        <a href="#" class="btn primary">Начать</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="blog">
+            <div class="container">
+                <h2>Блог</h2>
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <img src="images/blog-trends.svg" alt="CPA Marketing Trends 2024">
+                        <div class="blog-content">
+                            <h3>Тренды CPA маркетинга 2024</h3>
+                            <p>Узнайте о последних трендах и как их использовать...</p>
+                            <a href="#" class="read-more">Читать далее</a>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <img src="images/blog-success.svg" alt="Successful Webmasters">
+                        <div class="blog-content">
+                            <h3>Секреты успешных вебмастеров</h3>
+                            <p>Лучшие практики от топовых партнеров...</p>
+                            <a href="#" class="read-more">Читать далее</a>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <img src="images/blog-conversion.svg" alt="Conversion Optimization">
+                        <div class="blog-content">
+                            <h3>Оптимизация конверсии</h3>
+                            <p>Как увеличить CR ваших кампаний...</p>
+                            <a href="#" class="read-more">Читать далее</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts" class="contacts">
+            <div class="container">
+                <h2>Контакты</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Свяжитесь с нами</h3>
+                        <p><i class="fas fa-envelope"></i> support@cpanetwork.com</p>
+                        <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-telegram"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fab fa-skype"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Ваше имя" required>
+                        <input type="email" placeholder="Email" required>
+                        <textarea placeholder="Сообщение" required></textarea>
+                        <button type="submit" class="btn primary">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2>FAQ</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Как начать работать с вами?
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Зарегистрируйтесь на сайте, заполните профиль и начните работу с любым доступным оффером.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Какие методы оплаты вы поддерживаете?
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Мы работаем с PayPal, WebMoney, банковскими переводами и криптовалютами.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Как часто происходят выплаты?
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Выплаты производятся еженедельно при достижении минимальной суммы в $100.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>CPA Network</h4>
+                    <p>Ваш надежный партнер в мире CPA маркетинга</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#partnership">Партнерская программа</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Поддержка</h4>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                        <li><a href="#">Условия использования</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CPA Network. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
-
-</html>
+</html> 
