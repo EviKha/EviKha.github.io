@@ -1,0 +1,20 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:0.1"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+  <g fill="none" stroke="#ffffff" stroke-width="1" opacity="0.1">
+    <path d="M0 0l1920 1080M1920 0L0 1080"/>
+    <path d="M960 0v1080M0 540h1920"/>
+  </g>
+  <g fill="#ffffff" opacity="0.05">
+    <circle cx="480" cy="270" r="5"/>
+    <circle cx="1440" cy="270" r="5"/>
+    <circle cx="480" cy="810" r="5"/>
+    <circle cx="1440" cy="810" r="5"/>
+    <circle cx="960" cy="540" r="8"/>
+  </g>
+</svg> 
