@@ -44,8 +44,7 @@
         .click-button {
             font-size: clamp(3rem, 8vw, 6rem);
             color: white;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.25);
             border: 5px solid rgba(255, 255, 255, 0.6);
             border-radius: 50%;
             width: clamp(200px, 40vw, 350px);
@@ -59,6 +58,7 @@
             align-items: center;
             justify-content: center;
             animation: buttonFloat 2s ease-in-out infinite;
+            will-change: transform;
         }
 
         @keyframes buttonFloat {
@@ -150,16 +150,17 @@
         .floating-shape {
             position: absolute;
             border-radius: 50%;
-            opacity: 0.4;
+            opacity: 0.3;
             animation: float 20s infinite ease-in-out;
-            filter: blur(40px);
+            filter: blur(25px);
             transition: all 0.5s ease;
+            will-change: transform;
         }
 
         .floating-shape.pulse {
-            opacity: 0.7;
-            filter: blur(60px);
-            transform: scale(1.5);
+            opacity: 0.6;
+            filter: blur(35px);
+            transform: scale(1.3);
         }
 
         .shape1 {
@@ -251,6 +252,7 @@
             letter-spacing: -3px;
             animation: textFloat 4s ease-in-out infinite;
             line-height: 1.1;
+            will-change: transform;
         }
 
         .hero-subtitle {
@@ -442,8 +444,7 @@
             padding: 25px 60px;
             font-size: clamp(1.3rem, 2.5vw, 2rem);
             color: white;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.25);
             border: 4px solid rgba(255, 255, 255, 0.6);
             border-radius: 60px;
             box-shadow: 0 15px 40px rgba(0,0,0,0.3);
@@ -529,12 +530,27 @@
             z-index: 999;
             animation: confettiFall 5s linear infinite;
             border-radius: 50%;
+            will-change: transform, opacity;
+            contain: layout style paint;
         }
 
         @keyframes confettiFall {
             to {
                 transform: translateY(110vh) rotate(720deg);
                 opacity: 0;
+            }
+        }
+
+        /* Уважаем настройки снижения анимаций */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .floating-shape {
+                animation: none !important;
             }
         }
 
@@ -566,6 +582,46 @@
 
             .signature {
                 margin-top: 80px;
+            }
+
+            /* Упрощаем эффекты на мобильных */
+            .floating-shape {
+                filter: blur(15px);
+                opacity: 0.2;
+                animation: floatMobile 25s infinite ease-in-out;
+            }
+
+            .floating-shape.pulse {
+                filter: blur(20px);
+                opacity: 0.4;
+            }
+
+            .shape3, .shape5 {
+                display: none;
+            }
+
+            @keyframes floatMobile {
+                0%, 100% {
+                    transform: translate(0, 0);
+                }
+                50% {
+                    transform: translate(30px, -30px);
+                }
+            }
+
+            .hero h1,
+            .info-icon,
+            .details-section h2,
+            .signature-text {
+                animation: none !important;
+            }
+
+            .click-button {
+                animation: none;
+            }
+
+            .hearts {
+                animation: none;
             }
         }
     </style>
@@ -645,6 +701,9 @@
     </div>
 
     <script>
+        // Определяем мобильное устройство
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+
         // Счетчик кликов для стартового экрана
         let clickCount = 0;
         const maxClicks = 5;
@@ -673,13 +732,15 @@
             // Создаем мини-конфетти при каждом клике
             createMiniConfetti();
 
-            // Пульсируем случайное фоновое пятно
-            const shapes = document.querySelectorAll('.floating-shape');
-            const randomShape = shapes[Math.floor(Math.random() * shapes.length)];
-            randomShape.classList.add('pulse');
-            setTimeout(() => {
-                randomShape.classList.remove('pulse');
-            }, 500);
+            // Пульсируем случайное фоновое пятно (отключено на мобильных)
+            if (!isMobile) {
+                const shapes = document.querySelectorAll('.floating-shape');
+                const randomShape = shapes[Math.floor(Math.random() * shapes.length)];
+                randomShape.classList.add('pulse');
+                setTimeout(() => {
+                    randomShape.classList.remove('pulse');
+                }, 500);
+            }
 
             // Изменяем текст кнопки
             const texts = ['ЖМИ', 'ЕЩЁ!', 'ДАВАЙ!', 'ТАК!', 'LAST!'];
@@ -702,6 +763,8 @@
 
         // Мини-конфетти при клике
         function createMiniConfetti() {
+            if (isMobile) return; // Отключаем на мобильных
+            
             const colors = ['#ff6b6b', '#feca57', '#48dbfb', '#ff9ff3', '#54a0ff'];
             for (let i = 0; i < 15; i++) {
                 const confetti = document.createElement('div');
@@ -720,7 +783,7 @@
         // Создание конфетти
         function createConfetti() {
             const colors = ['#ff6b6b', '#feca57', '#48dbfb', '#ff9ff3', '#54a0ff', '#00d2d3', '#ee5a6f'];
-            const confettiCount = 100;
+            const confettiCount = isMobile ? 30 : 100; // Меньше на мобильных
 
             for (let i = 0; i < confettiCount; i++) {
                 const confetti = document.createElement('div');
@@ -739,37 +802,41 @@
             }
         }
 
-        // Параллакс эффект для фона
-        document.addEventListener('mousemove', (e) => {
-            const shapes = document.querySelectorAll('.floating-shape');
-            const mouseX = e.clientX / window.innerWidth;
-            const mouseY = e.clientY / window.innerHeight;
+        // Параллакс эффект для фона (отключено на мобильных)
+        if (!isMobile) {
+            document.addEventListener('mousemove', (e) => {
+                const shapes = document.querySelectorAll('.floating-shape');
+                const mouseX = e.clientX / window.innerWidth;
+                const mouseY = e.clientY / window.innerHeight;
 
-            shapes.forEach((shape, index) => {
-                const speed = (index + 1) * 0.05;
-                const x = (window.innerWidth * mouseX - window.innerWidth / 2) * speed;
-                const y = (window.innerHeight * mouseY - window.innerHeight / 2) * speed;
+                shapes.forEach((shape, index) => {
+                    const speed = (index + 1) * 0.05;
+                    const x = (window.innerWidth * mouseX - window.innerWidth / 2) * speed;
+                    const y = (window.innerHeight * mouseY - window.innerHeight / 2) * speed;
 
-                shape.style.transform = `translate(${x}px, ${y}px)`;
+                    shape.style.transform = `translate(${x}px, ${y}px)`;
+                });
             });
-        });
+        }
 
-        // Создание случайных искр
-        setInterval(() => {
-            const sparkle = document.createElement('div');
-            sparkle.innerHTML = '✨';
-            sparkle.style.position = 'fixed';
-            sparkle.style.left = Math.random() * 100 + '%';
-            sparkle.style.top = Math.random() * 100 + '%';
-            sparkle.style.fontSize = (Math.random() * 2 + 2) + 'rem';
-            sparkle.style.pointerEvents = 'none';
-            sparkle.style.zIndex = '1000';
-            sparkle.style.animation = 'sparkle 2s ease-out forwards';
-            sparkle.style.filter = 'drop-shadow(0 5px 15px rgba(0,0,0,0.3))';
-            document.body.appendChild(sparkle);
+        // Создание случайных искр (отключено на мобильных)
+        if (!isMobile) {
+            setInterval(() => {
+                const sparkle = document.createElement('div');
+                sparkle.innerHTML = '✨';
+                sparkle.style.position = 'fixed';
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                sparkle.style.fontSize = (Math.random() * 2 + 2) + 'rem';
+                sparkle.style.pointerEvents = 'none';
+                sparkle.style.zIndex = '1000';
+                sparkle.style.animation = 'sparkle 2s ease-out forwards';
+                sparkle.style.filter = 'drop-shadow(0 5px 15px rgba(0,0,0,0.3))';
+                document.body.appendChild(sparkle);
 
-            setTimeout(() => sparkle.remove(), 2000);
-        }, 2000);
+                setTimeout(() => sparkle.remove(), 2000);
+            }, 3000); // Увеличили интервал с 2с до 3с
+        }
     </script>
 </body>
 </html>
